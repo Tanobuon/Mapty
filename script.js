@@ -278,9 +278,10 @@ class App {
 
     deleteWorkoutButton = document.querySelector('.work__btn');
     deleteWorkoutButton.addEventListener('click', function () {
+      _deleteWorkout(workout.id);
       // let index = this.#workouts.indexOf(workout.id);
       // this.#workouts.splice(index, 1);
-      console.log(workout.id);
+      //console.log(workout.id);
     });
   }
 
@@ -298,7 +299,7 @@ class App {
       work => work.id === workoutEl.dataset.id
     );
 
-    this.#map.setView(workout.coords, this.#mapZoomLevel, {
+    this.#map.setVi(workout.coords, this.#mapZoomLevel, {
       animate: true,
       pan: {
         duration: 1,
@@ -327,5 +328,3 @@ class App {
 }
 
 const app = new App();
-
-// }
